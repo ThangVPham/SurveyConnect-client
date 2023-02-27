@@ -1,0 +1,13 @@
+#parId {
+    transition: translate-X(0) 1s;
+}
+
+.removed {
+    translate: 100vw;
+}
+
+.modal {
+    width: 100%;
+    height: 135%;
+    position: absolute;
+}

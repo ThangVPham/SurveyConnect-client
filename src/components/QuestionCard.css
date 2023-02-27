@@ -1,0 +1,23 @@
+.questionCard{
+    max-width: 500px;
+    margin: 5% auto;
+    border: 1px solid rgb(182, 181, 181);
+    box-shadow: 1px 1px;
+    border-radius: 5px;
+    padding:20px
+}
+
+.thank-you{
+ 
+    text-align: center
+}
+
+.thank-you h1{
+    color: black;
+}
+
+@media only screen and (max-width:400px){
+    .questionCard{
+        max-width: 95%;
+    }
+}

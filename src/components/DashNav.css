@@ -1,0 +1,18 @@
+.dashNavContainer {
+    height: 70px;
+    color: white;
+    background-color: #2B788B;
+}
+
+.dash-ul-font {
+    font-size: 14px;
+}
+
+.dash-icons {
+    font-size: 22px;
+}
+
+.dash-active {
+    background: rgba(216, 216, 216, 0.288);
+    border-radius: 15px;
+}
