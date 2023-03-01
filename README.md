@@ -16,6 +16,9 @@ This project was created for the purpose of gather research data for an undergra
 ![Dashboard_light](https://user-images.githubusercontent.com/78657808/222193264-26abff93-1462-491b-8520-c4ebea0ed50b.jpg)
 ![Dashboard_dark](https://user-images.githubusercontent.com/78657808/222193296-ff5bf289-2416-4687-adcf-3698bf485d1b.jpg)
 
+### Mobile view for Dashboard
+![Mobile](https://user-images.githubusercontent.com/78657808/222194196-3bb47566-9bd5-4633-a262-95a68e7eeb7a.jpg)
+
 ### AccessCode Required for private survey
 ![AccessCode](https://user-images.githubusercontent.com/78657808/222193928-9243ae64-9ca8-4195-818e-b55b2d0ceae5.jpg)
 
@@ -25,5 +28,4 @@ This project was created for the purpose of gather research data for an undergra
 ### User Profile
 ![UserProfile](https://user-images.githubusercontent.com/78657808/222194147-77af4c99-389a-41ba-83ec-aa19ceedb528.jpg)
 
-### Mobile view for Dashboard
-![Mobile](https://user-images.githubusercontent.com/78657808/222194196-3bb47566-9bd5-4633-a262-95a68e7eeb7a.jpg)
+
