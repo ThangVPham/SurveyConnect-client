@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Logo from "../assets/SC.svg";
 import LogoWhite from "../assets/SCWhite.svg";
 import MobileNavMenu from "./MobileNavMenu";
@@ -15,7 +16,7 @@ function Nav({
   setToggle,
 }) {
   const token = localStorage.getItem("token");
-
+  const navigate = useNavigate();
   return (
     <div className={theme ? "dark" : ""}>
       <div className="h-26 flex justify-between items-center px-10 py-2  shadow-2xl dark:bg-[#142641]">
@@ -60,12 +61,14 @@ function Nav({
           <div className="md:ml-4">
             {token ? (
               <div>
-                <a
-                  href="/dashboard"
+                <button
+                  onClick={() => {
+                    navigate("/dashboard");
+                  }}
                   className="w-28 text-center py-2 px-4 rounded-3xl text-white bg-green-600 dark:bg-transparent dark:border dark:border-[#51D1B4]  dark:hover:bg-[#51D1B4] dark:hover:text-slate-700"
                 >
                   Dashboard
-                </a>
+                </button>
               </div>
             ) : (
               <div
