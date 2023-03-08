@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import SurveyResponseSuccess from "./SurveyResponseSuccess";
+import SurveyResponseError from "./SurveyResponseError";
 const home = <FontAwesomeIcon icon={faHome} />;
 const token = localStorage.getItem("token");
 const baseURL = "https://surveyconnect-server.onrender.com";
@@ -135,7 +136,7 @@ function QuestionCard({ survey }) {
 
   return (
     <div className="w-full text-center h-screen bg-cyan-900 dark:bg-slate-900 text-slate-100">
-      {!submitSuccess && (
+      {!submitSuccess && !submitError && (
         <div>
           <div className="mb-8 pt-8 ">
             <h1 className="font-bold text-xl mb-4">{survey.surveyName}</h1>
@@ -337,6 +338,11 @@ function QuestionCard({ survey }) {
       {submitSuccess && (
         <div>
           <SurveyResponseSuccess></SurveyResponseSuccess>
+        </div>
+      )}
+      {submitError && (
+        <div>
+          <SurveyResponseError></SurveyResponseError>
         </div>
       )}
     </div>
