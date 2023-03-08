@@ -10,7 +10,7 @@ import ASLSurvey from "pages/ASLSurvey";
 import AccessCode from "pages/AccessCode";
 import SurveyEdit from "pages/SurveyEdit";
 import UserProfile from "pages/UserProfile";
-import SurveyResponseSuccess from "pages/SurveyResponseSuccess";
+
 import NewSurvey from "pages/NewSurvey";
 function App() {
   //Set theme to light by default if user hasn't set theme
@@ -73,10 +73,7 @@ function App() {
           />
           <Route path="/verify" element={<AccessCode theme={theme} />} />
           <Route path="/user/" element={<UserProfile theme={theme} />} />
-          <Route
-            path="/response-success"
-            element={<SurveyResponseSuccess theme={theme} />}
-          />
+
           <Route path="/newsurvey" element={<NewSurvey theme={theme} />} />
         </Routes>
       </Router>

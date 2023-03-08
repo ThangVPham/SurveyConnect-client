@@ -1,7 +1,7 @@
 import React from "react";
 import Success from "../assets/success-checkmark.png";
 
-function SurveyResponseSuccess({ theme }) {
+function SurveyResponseSuccess() {
   return (
     <div className="w-full text-center h-screen bg-cyan-900 dark:bg-slate-900 ">
       <div className="mb-8 pt-8 text-sky-100 flex justify-center items-center w-full ">
