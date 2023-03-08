@@ -8,7 +8,7 @@ import Spinner from "../assets/loading-gif.gif";
 import { useNavigate } from "react-router-dom";
 import SurveyItem from "./SurveyItem";
 import "./DashSurveyList.css";
-const baseURL_development = "http://localhost:5000";
+
 const baseURL = "https://surveyconnect-server.onrender.com";
 
 function DashSurveyList({ theme }) {
@@ -16,11 +16,7 @@ function DashSurveyList({ theme }) {
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
   //Fetch data from db
-  const {
-    data = [],
-    loading,
-    error,
-  } = useFetch(`${baseURL_development}/survey`, token);
+  const { data = [], loading, error } = useFetch(`${baseURL}/survey`, token);
 
   const [surveyList, setSurveyList] = useState([]);
   const [tabActive, setTabActive] = useState("All");
@@ -38,7 +34,7 @@ function DashSurveyList({ theme }) {
       ...selectedSurvey[0],
       public: !selectedSurvey[0].public,
     };
-    await fetch(`${baseURL_development}/survey/${id}`, {
+    await fetch(`${baseURL}/survey/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -84,7 +80,7 @@ function DashSurveyList({ theme }) {
         id = e.target.parentNode.parentNode.id;
       }
       console.log("Deleting");
-      await fetch(`${baseURL_development}/survey/${id}`, {
+      await fetch(`${baseURL}/survey/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

@@ -4,13 +4,12 @@ import useFetch from "utility/useFetch";
 import DashNav from "../components/DashNav";
 function UserProfile({ theme }) {
   const token = localStorage.getItem("token");
-  const baseURL_development = "http://localhost:5000";
+  const baseURL = "https://surveyconnect-server.onrender.com";
 
-  const {
-    data = { _id: "" },
-    loading,
-    error,
-  } = useFetch(`${baseURL_development}/user/userprofile`, token);
+  const { data = { _id: "" }, loading } = useFetch(
+    `${baseURL}/user/userprofile`,
+    token
+  );
 
   return (
     <div className="">

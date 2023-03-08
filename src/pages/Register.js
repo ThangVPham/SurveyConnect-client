@@ -73,7 +73,7 @@ function Register({ theme }) {
           : "w-full h-screen flex items-center justify-center background pb-1"
       }
     >
-      <div className="w-96 xl:w-1/4 h-5/7  border-transparent rounded-2xl p-10 bg-slate-800/50">
+      <div className="w-96 xl:w-1/4 h-5/7  border-transparent rounded-2xl p-10 dark:bg-[#172A46] shadow-2xl bg-slate-800/50">
         <form action="" className="flex flex-col w-full">
           {card === 1 && (
             <button

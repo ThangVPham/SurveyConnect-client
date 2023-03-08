@@ -8,7 +8,7 @@ function AccessCode({ theme }) {
   const navigate = useNavigate();
   const surveyId = location.state.id;
   const HomeIcon = <FontAwesomeIcon icon={faHome} />;
-  const baseURL_development = "http://localhost:5000";
+  const baseURL = "https://surveyconnect-server.onrender.com";
   const [accessBody, setAccessBody] = useState({
     surveyId: surveyId,
     accessCode: "",
@@ -32,7 +32,7 @@ function AccessCode({ theme }) {
       authorization: `Bearer ${token}`,
     };
 
-    const res = await fetch(`${baseURL_development}/survey/verifyaccess`, {
+    const res = await fetch(`${baseURL}/survey/verifyaccess`, {
       method: "POST",
       headers: requestHeaders,
       body: JSON.stringify(accessBody),
@@ -56,7 +56,7 @@ function AccessCode({ theme }) {
       className={
         theme
           ? "dark-background h-screen flex jsutify-center"
-          : "background h-screen flex jsutify-center"
+          : "background h-screen flex justify-center"
       }
     >
       <div className="w-5/6 md:w-2/3 lg:w-1/2 xl:w-1/3 bg-slate-800/[0.5] dark:bg-transparent dark:border dark:border-slate-800 dark:shadow-2xl text-white mx-auto my-auto h-1/2 rounded-xl p-5 bg-sky-50">
@@ -134,7 +134,7 @@ function AccessCode({ theme }) {
           />
           <button
             type="button"
-            className=" mt-5  h-10 rounded-xl active:bg-cyan-800/75 bg-zinc-900/75 h-10 text-sky-100"
+            className=" mt-5 rounded-xl active:bg-cyan-800/75 bg-zinc-900/75 h-10 text-sky-100"
             onClick={(e) => verifyAccess(e)}
           >
             Continue

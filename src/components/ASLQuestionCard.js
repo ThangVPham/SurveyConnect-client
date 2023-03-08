@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const home = <FontAwesomeIcon icon={faHome} />;
 const token = localStorage.getItem("token");
-const baseURL_development = "http://localhost:5000";
+const baseURL = "https://surveyconnect-server.onrender.com";
 const emailFormatRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 function QuestionCard({ survey }) {
@@ -66,7 +66,7 @@ function QuestionCard({ survey }) {
       authorization: `Bearer ${token}`,
       surveyID: surveyID,
     };
-    const res = await fetch(`${baseURL_development}/response/submitresponse`, {
+    const res = await fetch(`${baseURL}/response/submitresponse`, {
       method: "POST",
       headers: requestHeaders,
       body: JSON.stringify(response),
@@ -92,7 +92,7 @@ function QuestionCard({ survey }) {
 
     if (emailFormatRegex.test(email.email)) {
       const res = await fetch(
-        `${baseURL_development}/response/submitresponse/verifyemail`,
+        `${baseURL}/response/submitresponse/verifyemail`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

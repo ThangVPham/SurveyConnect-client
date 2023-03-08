@@ -4,7 +4,7 @@ import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 
 function QuestionCard({ survey, ownerView }) {
-  const baseURL_development = "http://localhost:5000";
+  const baseURL = "https://surveyconnect-server.onrender.com";
   const home = <FontAwesomeIcon icon={faHome} />;
   const surveyID = window.location.href.split("/").pop();
   const token = localStorage.getItem("token");
@@ -73,7 +73,7 @@ function QuestionCard({ survey, ownerView }) {
       authorization: `Bearer ${token}`,
       surveyID: surveyID,
     };
-    const res = await fetch(`${baseURL_development}/response/submitresponse`, {
+    const res = await fetch(`${baseURL}/response/submitresponse`, {
       method: "POST",
       headers: requestHeaders,
       body: JSON.stringify(response),

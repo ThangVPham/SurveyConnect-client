@@ -49,7 +49,7 @@ const SurveySettings = ({
         >
           <div className="flex flex-col text-sm ">
             <CopyToClipboard
-              text={`http://localhost:3000/survey/${survey._id}`}
+              text={`https://surveyconnect-server.onrender.com/survey/${survey._id}`}
               //change text to website url once lauched
             >
               <span

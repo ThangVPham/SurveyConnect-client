@@ -5,7 +5,7 @@ import SurveyEditNav from "components/SurveyEditNav";
 import SurveyOverView from "components/SurveyOverView";
 function SurveyEdit({ theme }) {
   const id = window.location.href.split("/").pop();
-  const baseURL_development = "http://localhost:5000";
+  const baseURL = "https://surveyconnect-server.onrender.com";
   const [data, setData] = useState({});
 
   useEffect(() => {
@@ -15,7 +15,7 @@ function SurveyEdit({ theme }) {
       "Content-Type": "application/json",
       authorization: `Bearer ${token}`,
     };
-    fetch(`${baseURL_development}/survey/surveydetail/${id}`, {
+    fetch(`${baseURL}/survey/surveydetail/${id}`, {
       method: "GET",
       headers: requestHeaders,
     })

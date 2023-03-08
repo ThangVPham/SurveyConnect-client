@@ -8,7 +8,7 @@ import Spinner from "../assets/loading-gif.gif";
 function Login({ theme }) {
   const HomeIcon = <FontAwesomeIcon icon={faHome} />;
   const EyeReveal = <FontAwesomeIcon icon={faEye} />;
-  const baseURL_development = "http://localhost:5000";
+  const baseURL = "https://surveyconnect-server.onrender.com";
 
   const navigate = useNavigate();
   useEffect(() => {
@@ -34,7 +34,7 @@ function Login({ theme }) {
 
   const logUserIn = async (userInfo, e) => {
     setLoading(true);
-    const response = await fetch(`${baseURL_development}/user/login`, {
+    const response = await fetch(`${baseURL}/user/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -61,7 +61,7 @@ function Login({ theme }) {
           : "w-full h-screen flex items-center justify-center background pb-1"
       }
     >
-      <div className="w-96 xl:w-1/4 flex flex-col h-5/7 border-transparet rounded-2xl p-10 bg-slate-800/50">
+      <div className="w-96 xl:w-1/4 flex flex-col h-5/7 border-transparet rounded-2xl p-10 dark:bg-[#172A46] shadow-2xl bg-slate-800/50">
         <form action="" className="flex flex-col w-full">
           <p className="text-end text-sky-100 text-sm">
             Don't have an account yet?{" "}
@@ -171,7 +171,7 @@ function Login({ theme }) {
             <p className="text-sm text-sky-100">Remember Me</p>
           </div>
           <div
-            className="w-full w-full bg-zinc-900/75 h-10 text-sky-100 flex justify-center items-center hover:cursor-pointer"
+            className="w-full bg-zinc-900/75 h-10 text-sky-100 flex justify-center items-center hover:cursor-pointer"
             onClick={(e) => logUserIn(loginInfo, e)}
           >
             {!loading ? (

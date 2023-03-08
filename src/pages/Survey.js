@@ -12,13 +12,13 @@ const token = localStorage.getItem("token");
 
 function Survey({ theme }) {
   const navigate = useNavigate();
-  const baseURL_development = "http://localhost:5000";
+  const baseURL = "https://surveyconnect-server.onrender.com";
 
   const {
     data = { errorMessage: "", _id: "", surveyName: "" },
     loading = true,
     error = false,
-  } = useFetch(`${baseURL_development}/survey/${id}`, token);
+  } = useFetch(`${baseURL}/survey/${id}`, token);
 
   if (loading) {
     return (
