@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.dc587e21.css",
+    "main.js": "/static/js/main.c95d3923.js",
+    "static/js/787.4e74e66c.chunk.js": "/static/js/787.4e74e66c.chunk.js",
+    "static/media/boy-with-book.svg": "/static/media/boy-with-book.7162d97cbdf309e65b61e5de2465ce32.svg",
+    "static/media/error.jpg": "/static/media/error.4bcb3fe4c3ba3594c1e3.jpg",
+    "static/media/loading-gif.gif": "/static/media/loading-gif.803f24369a085e35482e.gif",
+    "static/media/GreenMountain.svg": "/static/media/GreenMountain.d783ee68bfd83cc2c3bc335fa8645218.svg",
+    "static/media/greenDarkMode.svg": "/static/media/greenDarkMode.cfe681376038628abe53861c9b499be1.svg",
+    "static/media/SC.svg": "/static/media/SC.b86dd6929ca3c790e371fcba8df3601d.svg",
+    "static/media/SCWhite.svg": "/static/media/SCWhite.76cc4de89480e430650e56979b61831d.svg",
+    "static/media/Sun.svg": "/static/media/Sun.681607dcda2a01539a9a8a157ae74e6e.svg",
+    "index.html": "/index.html",
+    "static/media/Moon.svg": "/static/media/Moon.0a6a2b75ac51157455302ddcfca385c0.svg",
+    "main.dc587e21.css.map": "/static/css/main.dc587e21.css.map",
+    "main.c95d3923.js.map": "/static/js/main.c95d3923.js.map",
+    "787.4e74e66c.chunk.js.map": "/static/js/787.4e74e66c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dc587e21.css",
+    "static/js/main.c95d3923.js"
+  ]
+}
