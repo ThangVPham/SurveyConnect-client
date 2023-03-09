@@ -41,7 +41,7 @@ function MobileNavMenu({
         >
           {/* Mobile Nav Items */}
           <div className="flex flex-col pb-2">
-            <div className="p-2 w-2/3">
+            <div className=" w-2/3">
               <button onClick={toggleTheme} className="w-full">
                 <Switch
                   active={active}
@@ -94,7 +94,7 @@ function MobileNavMenu({
         <div className=" h-screen">
           {collapse ? (
             <button
-              className=" pt-8 pr-16 w-full"
+              className=" pt-8 pr-16 w-full dark:text-slate-200"
               onClick={() => collapseMenu()}
             >
               {mobileMenu}

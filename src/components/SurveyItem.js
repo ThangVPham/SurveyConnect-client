@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import SurveySettings from "./SurveySettings";
@@ -9,7 +9,9 @@ import {
   faShareAlt,
   faTrashAlt,
   faLockOpen,
+  faCheck,
 } from "@fortawesome/free-solid-svg-icons";
+
 function SurveyItem({
   survey,
   deleteSurvey,
@@ -22,6 +24,8 @@ function SurveyItem({
   const share = <FontAwesomeIcon icon={faShareAlt} size={"sm"} />;
   const lock = <FontAwesomeIcon icon={faLock} size={"sm"} />;
   const unlock = <FontAwesomeIcon icon={faLockOpen} size={"sm"} />;
+  const copy = <FontAwesomeIcon icon={faCheck} size={"sm"} />;
+  const [copied, setCopied] = useState(false);
 
   return (
     <div className="mb-2">
@@ -89,7 +93,12 @@ function SurveyItem({
             {survey.public ? <span>{lock}</span> : <span>{unlock}</span>}
           </div>
           <div className="border dark:border-slate-600 h-10 p-3 rounded-2xl  mx-1 hover:bg-slate-300  dark:hover:bg-[#51D1B4] hover:cursor-pointer hidden sm:block">
-            {share}
+            <CopyToClipboard
+              text={`https://surveyconnect.onrender.com/survey/${survey._id}`}
+              onCopy={() => setCopied(true)}
+            >
+              {copied ? copy : share}
+            </CopyToClipboard>
           </div>
         </div>
         <div className="flex w-2 lg:hidden h-full align-top hover:cursor-pointer sm:hidden">
