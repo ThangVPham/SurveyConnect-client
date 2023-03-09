@@ -17,7 +17,8 @@ function Survey({ theme }) {
   const id = location.state
     ? location.state.id
     : window.location.href.split("/").pop();
-  console.log(location.state);
+  console.log(id);
+
   const {
     data = { errorMessage: "", _id: "", surveyName: "" },
     loading = true,
