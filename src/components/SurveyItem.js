@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 import SurveySettings from "./SurveySettings";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -46,14 +48,7 @@ function SurveyItem({
           </h6>
           <div className="text-center text-xs  lg:text-sm  hidden md:block w-20 ">
             <h6 className="font-semibold">Owner</h6>
-            <p
-              // className={
-              //   survey.organization.length > 32 ? "text-xs truncate" : "text-xs"
-              // }
-              className="text-xs truncate"
-            >
-              {survey.organization}
-            </p>
+            <p className="text-xs truncate">{survey.organization}</p>
           </div>
         </div>
         <div className="hidden md:flex flex-col w-20 sm:28 md:w-24 text-center">
@@ -70,19 +65,20 @@ function SurveyItem({
         </div>
 
         <div className="flex ">
-          <a
-            className="border dark:border-2 h-8 md:h-10 w-16 py-1 sm:py-2 px-5 rounded-3xl text-white bg-green-600 hover:bg-green-500  dark:border-[#51D1B4]  dark:text-[#51D1B4] w-28 flex justify-center items-center md:w-24 lg:w-28 hover:cursor-pointer  dark:hover:bg-[#0A192F] dark:hover:text-cyan-100
+          <Link
+            className="border dark:border-2 h-8 md:h-10 py-1 sm:py-2 px-5 rounded-3xl text-white bg-green-600 hover:bg-green-500  dark:border-[#51D1B4]  dark:text-[#51D1B4] w-28 flex justify-center items-center md:w-24 lg:w-28 hover:cursor-pointer  dark:hover:bg-[#0A192F] dark:hover:text-cyan-100
             dark:bg-transparent"
-            href={`/survey/${survey._id}`}
+            to={`/survey/${survey._id}`}
+            state={{ id: survey._id }}
           >
             <p className="w-full text-xs text-center">View </p>
-          </a>
-          <a
-            href={`/surveyedit/${survey._id}`}
+          </Link>
+          <Link
+            to={`/surveyedit/${survey._id}`}
             className="border dark:border-slate-600 h-10 p-3 rounded-2xl ml-4  mr-1 hover:bg-slate-300 dark:hover:bg-[#51D1B4] hover:cursor-pointer hidden sm:block"
           >
             {edit}
-          </a>
+          </Link>
 
           <div
             className="border dark:border-slate-600 h-10 p-3 rounded-2xl mx-1 hover:bg-slate-300  dark:hover:bg-[#51D1B4] hover:cursor-pointer hidden sm:block"

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import "./GradientBG.css";
@@ -139,9 +139,9 @@ function AccessCode({ theme }) {
           >
             Continue
           </button>
-          <a href="/dashboard" className="text-sky-100 text-center mt-5">
+          <Link to="/dashboard" className="text-sky-100 text-center mt-5">
             {HomeIcon}
-          </a>
+          </Link>
         </form>
       </div>
     </div>

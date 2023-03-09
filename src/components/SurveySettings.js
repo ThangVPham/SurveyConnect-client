@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 import "./SurveySettings.css";
@@ -49,7 +50,7 @@ const SurveySettings = ({
         >
           <div className="flex flex-col text-sm ">
             <CopyToClipboard
-              text={`http://localhost:3001/survey/${survey._id}`}
+              text={`https://surveyconnect-server.onrender.com/survey/${survey._id}`}
               //change text to website url once lauched
             >
               <span
@@ -63,12 +64,12 @@ const SurveySettings = ({
               </span>
             </CopyToClipboard>
 
-            <a
+            <Link
               className="pt-3 pl-3 hover:text-green-400  dark:hover:text-[#51D1B4]"
-              href={`/surveyedit/${survey._id}`}
+              to={`/surveyedit/${survey._id}`}
             >
               Edit
-            </a>
+            </Link>
             <span
               className="pt-3 pl-3 hover:text-green-400  dark:hover:text-[#51D1B4]"
               id={survey._id}

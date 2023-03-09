@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faEye } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "./GradientBG.css";
 import Spinner from "../assets/loading-gif.gif";
 
@@ -65,12 +65,12 @@ function Login({ theme }) {
         <form action="" className="flex flex-col w-full">
           <p className="text-end text-sky-100 text-sm">
             Don't have an account yet?{" "}
-            <a
-              href="/register"
+            <Link
+              to="/register"
               className="text-sky-500 hover:cursor-pointer m-0 p-0"
             >
               Sign Up Here
-            </a>
+            </Link>
           </p>
 
           <h1 className="text-2xl py-3 text-sky-100 ">Log In</h1>
@@ -181,9 +181,9 @@ function Login({ theme }) {
             )}
           </div>
         </form>
-        <a href="/" className="text-white text-center mt-5">
+        <Link to="/" className="text-white text-center mt-5">
           {HomeIcon}
-        </a>
+        </Link>
       </div>
     </div>
   );

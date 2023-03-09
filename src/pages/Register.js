@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./GradientBG.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Spinner from "../assets/loading-gif.gif";
 const emailFormatRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
@@ -87,9 +87,9 @@ function Register({ theme }) {
 
           <p className="text-end text-sky-100 text-sm">
             Already have an account?{" "}
-            <a className="text-sky-500 hover:cursor-pointer m-0" href="/login">
+            <Link className="text-sky-500 hover:cursor-pointer m-0" to="/login">
               Login Here
-            </a>
+            </Link>
           </p>
 
           <h1 className="text-2xl py-3 text-sky-100 ">Create an account</h1>
@@ -238,9 +238,9 @@ function Register({ theme }) {
               )}
             </div>
           )}
-          <a href="/" className="text-white text-center mt-5">
+          <Link to="/" className="text-white text-center mt-5">
             {HomeIcon}
-          </a>
+          </Link>
         </form>
       </div>
     </div>

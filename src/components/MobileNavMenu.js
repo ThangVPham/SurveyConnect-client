@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import Switch from "./Switch";
@@ -74,18 +75,18 @@ function MobileNavMenu({
           <div>
             {token ? (
               <div>
-                <a href="/dashboard" className="ml-2 hover:text-cyan-600">
+                <Link to="/dashboard" className="ml-2 hover:text-cyan-600">
                   Dashboard
-                </a>
+                </Link>
               </div>
             ) : (
               <div className="flex flex-col">
-                <a href="/login" className="pb-4 hover:text-cyan-600">
+                <Link to="/login" className="pb-4 hover:text-cyan-600">
                   Login
-                </a>
-                <a href="/register" className=" hover:text-cyan-500">
+                </Link>
+                <Link to="/register" className=" hover:text-cyan-500">
                   Sign Up
-                </a>
+                </Link>
               </div>
             )}
           </div>

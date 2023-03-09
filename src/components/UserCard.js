@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
@@ -50,7 +51,7 @@ function UserCard({ user, loading }) {
                 : "User Profile"}
             </h1>
             <h6 className="text-black dark:text-sky-50 flex gap-2 text-sm">
-              <a href="/dashboard">Survey Connect</a>
+              <Link to="/dashboard">Survey Connect</Link>
               <span>{Arrow} </span>
               <span>{tab}</span>
             </h6>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./DashNav.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -35,9 +36,9 @@ function DashNav({ theme }) {
       <div className="bg-gradient-to-r bg-white   text-white h-16 shadow-xl dark:bg-gradient-to-r dark:from-[#09192F] dark:to-[#172A46] dark:text-sky-50">
         <header className="flex justify-between mx-4 h-full items-center  w-100">
           <div className="w-44 xl:w-6/12 hidden sm:block">
-            <a href="/">
+            <Link to="/">
               <img src={theme ? LogoWhite : Logo} alt="" className="w-100 " />
-            </a>
+            </Link>
           </div>
           <div className="sm:hidden hover:cursor-pointer">{menu}</div>
 
@@ -49,19 +50,19 @@ function DashNav({ theme }) {
             >
               <div className="flex justify-center focus:ring focus:white">
                 <div className="mr-1">{add}</div>
-                <a href="/newsurvey">New Survey</a>
+                <Link to="/newsurvey">New Survey</Link>
               </div>
             </button>
             <div className="flex justify-content-evenly ">
               <button className="pt-1 hover:text-green-200 dark:hover:text-sky-600">
                 {bell}
               </button>
-              <a
-                href="/user"
+              <Link
+                to="/user"
                 className="px-3 flex pt-1 align-top hover:text-green-200 dark:hover:text-sky-600"
               >
                 {user}
-              </a>
+              </Link>
             </div>
           </div>
         </header>
