@@ -14,8 +14,10 @@ function Survey({ theme }) {
   const navigate = useNavigate();
   const baseURL = "https://surveyconnect-server.onrender.com";
   const location = useLocation();
-  const id = location.state ?? window.location.href.split("/").pop();
-  console.log(id);
+  const id = location.state
+    ? location.state.id
+    : window.location.href.split("/").pop();
+  console.log(location.state);
   const {
     data = { errorMessage: "", _id: "", surveyName: "" },
     loading = true,
