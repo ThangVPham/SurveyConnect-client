@@ -334,7 +334,6 @@ function QuestionCard({ survey }) {
           </div>
         </div>
       )}
-
       {submitSuccess && (
         <div>
           <SurveyResponseSuccess></SurveyResponseSuccess>
