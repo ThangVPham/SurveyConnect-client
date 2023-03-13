@@ -17,7 +17,7 @@ function DashSurveyList({ theme }) {
   const navigate = useNavigate();
   //Fetch data from db
   const { data = [], loading, error } = useFetch(`${baseURL}/survey`, token);
-
+  console.log(data);
   const [surveyList, setSurveyList] = useState([]);
   const [tabActive, setTabActive] = useState("All");
   const [filteredSurveys, setFilteredSurveys] = useState([]);
@@ -94,21 +94,15 @@ function DashSurveyList({ theme }) {
   };
 
   useEffect(() => {
-    //Check if there is token in localstorage
-
     //Check if token is valid by checking the data got back is an array of surveys or an error.
-    if (!Array.isArray(data)) {
-      //If token is invalid, remove token from localstorage
-      localStorage.removeItem("token");
-      navigate("/login");
-    } else {
+    if (data.length > 0) {
       //If token valid, set data for rendering
       const list = data.map((survey) => {
         return { ...survey, isDelete: false };
       });
       setSurveyList(list);
     }
-  }, [loading]);
+  }, [loading, data]);
 
   //Error Message
   if (error) {

@@ -6,12 +6,7 @@ import "./Welcome.css";
 function Welcome({ theme }) {
   const navigate = useNavigate();
   const checkLogin = () => {
-    const token = localStorage.getItem("token");
-    if (token) {
-      navigate("/dashboard");
-    } else {
-      navigate("/login");
-    }
+    navigate("/dashboard");
   };
   return (
     <div>
