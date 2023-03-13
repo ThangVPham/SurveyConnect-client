@@ -47,7 +47,7 @@ function Nav({
             >
               Pricing
             </button>
-            <button
+            {/* <button
               className=" hover:text-green-600 dark:text-white dark:hover:text-[#51D1B4]"
               value={"About"}
               onClick={(e) => {
@@ -55,7 +55,7 @@ function Nav({
               }}
             >
               About
-            </button>
+            </button> */}
           </div>
           <div>
             <button onClick={toggleTheme}>

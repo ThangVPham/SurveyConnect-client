@@ -21,7 +21,7 @@ const About = ({ theme }) => {
             efficient.
           </p>
         </div>
-        <div className="flex flex-col-reverse md:flex-row md:justify-around dark:bg-[#0F172A]">
+        <div className="flex flex-col-reverse md:flex-row md:justify-center dark:bg-[#0F172A] lg:w-5/6">
           <div className="flex h-96 mt-5">
             <img
               src={theme === false ? greenMountain : DarkMode}

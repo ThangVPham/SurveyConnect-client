@@ -43,7 +43,7 @@ function DashNav({ theme }) {
           <div className="sm:hidden hover:cursor-pointer">{menu}</div>
 
           <div className="flex dash-ul-font items-center w-56 justify-end">
-            <button
+            {/* <button
               className={
                 "px-2 py-2 w-36   mr-3 text-center border rounded-3xl  dark:border-2 dark:border-[#51D1B4] bg-green-700 hover:bg-green-600 dark:bg-transparent dark:text-[#51D1B4] hover:cursor-pointer  dark:hover:bg-[#0A192F] dark:hover:text-cyan-100"
               }
@@ -52,8 +52,8 @@ function DashNav({ theme }) {
                 <div className="mr-1">{add}</div>
                 <Link to="/newsurvey">New Survey</Link>
               </div>
-            </button>
-            <div className="flex justify-content-evenly ">
+            </button> */}
+            {/* <div className="flex justify-content-evenly ">
               <button className="pt-1 hover:text-green-200 dark:hover:text-sky-600">
                 {bell}
               </button>
@@ -63,7 +63,7 @@ function DashNav({ theme }) {
               >
                 {user}
               </Link>
-            </div>
+            </div> */}
           </div>
         </header>
       </div>
