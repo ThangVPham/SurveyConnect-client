@@ -68,37 +68,14 @@ function Nav({
             </button>
           </div>
           <div className="md:ml-4">
-            {token ? (
-              <div>
-                <Link
-                  to="/dashboard"
-                  className="w-28 text-center py-2 px-4 rounded-3xl border border-green-600 text-white bg-green-600 dark:bg-transparent dark:border dark:border-[#51D1B4]  dark:hover:bg-[#51D1B4] dark:hover:text-slate-700 hover:text-green-600 hover:bg-white transition-colors"
-                >
-                  Dashboard
-                </Link>
-              </div>
-            ) : (
-              <div
-                className={
-                  theme
-                    ? "w-48 flex items-center text-sky-50"
-                    : "w-48 flex items-center"
-                }
+            <div>
+              <Link
+                to="/dashboard"
+                className="w-28 text-center py-2 px-4 rounded-3xl border border-green-600 text-white bg-green-600 dark:bg-transparent dark:border dark:border-[#51D1B4]  dark:hover:bg-[#51D1B4] dark:hover:text-slate-700 hover:text-green-600 hover:bg-white transition-colors"
               >
-                <Link
-                  to="/login"
-                  className="w-20 text-center py-1 px-4 rounded-3xl dark:border dark:border-[#51D1B4] mr-2 hover:text-green-600 hover:bg-sky-50 dark:hover:text-slate-700 dark:hover:border-0"
-                >
-                  Login
-                </Link>
-                <Link
-                  to="/register"
-                  className="w-24 text-center py-1 px-4 rounded-3xl text-sky-50 bg-green-600  hover:border-green-600 hover:bg-white hover:text-green-600 dark:bg-slate-800 dark:hover:text-slate-700 dark:hover:border-0 dark:hover:bg-sky-50 dark:border  dark:border-[#51D1B4]"
-                >
-                  Sign Up
-                </Link>
-              </div>
-            )}
+                Dashboard
+              </Link>
+            </div>
           </div>
         </div>
         <div className="w-full md:w-0">
