@@ -77,7 +77,7 @@ function SurveyItem({
           >
             <p className="w-full text-xs text-center">View </p>
           </Link>
-          <Link
+          {/* <Link
             to={`/surveyedit/${survey._id}`}
             className="border dark:border-slate-600 h-10 p-3 rounded-2xl ml-4  mr-1 hover:bg-slate-300 dark:hover:bg-[#51D1B4] hover:cursor-pointer hidden sm:block"
           >
@@ -99,9 +99,9 @@ function SurveyItem({
             >
               {copied ? copy : share}
             </CopyToClipboard>
-          </div>
+          </div> */}
         </div>
-        <div className="flex w-2 lg:hidden h-full align-top hover:cursor-pointer sm:hidden">
+        {/* <div className="flex w-2 lg:hidden h-full align-top hover:cursor-pointer sm:hidden">
           <SurveySettings
             survey={survey}
             deleteSurvey={deleteSurvey}
@@ -109,8 +109,8 @@ function SurveyItem({
             setSubMenu={setSubMenu}
             selectLockSurvey={selectLockSurvey}
           ></SurveySettings>
-        </div>
-        <div
+        </div> */}
+        {/* <div
           className="border dark:border-slate-600 h-10 p-3 rounded-2xl hover:bg-red-300 hover:cursor-pointer hover:border-red-200 hidden sm:block md:mr-2"
           id={survey._id}
           onClick={(e) => {
@@ -118,7 +118,7 @@ function SurveyItem({
           }}
         >
           {del}
-        </div>
+        </div> */}
       </div>
     </div>
   );
