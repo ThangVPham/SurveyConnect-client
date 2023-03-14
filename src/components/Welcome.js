@@ -25,13 +25,6 @@ function Welcome({ theme }) {
             </p>
             <div className="flex">
               <button
-                className="bg-green-600 w-1/7 px-4 py-2 border rounded-3xl text-sky-50 mt-5 mx-2 hover:cursor-pointer  hover:shadow-xl  dark:bg-transparent dark:hover:text-slate-700 dark:border-[#51D1B4] hover:text-green-600 hover:bg-white dark:hover:bg-[#51D1B4] transition-colors"
-                onClick={checkLogin}
-              >
-                Get Started
-              </button>
-
-              <button
                 className="bg-green-600 w-1/7 px-4 py-2 border rounded-3xl text-sky-50 mt-5 mx-2 hover:cursor-pointer  hover:shadow-xl  dark:bg-transparent dark:hover:text-slate-700 dark:border-[#51D1B4]  hover:text-green-600 hover:bg-white dark:hover:bg-[#51D1B4] transition-colors"
                 onClick={checkLogin}
               >
@@ -39,7 +32,7 @@ function Welcome({ theme }) {
               </button>
             </div>
           </div>
-          <div className="w-1/2 sm:w-3/4 md:w-1/2 lg:w-1/4 mt-10 ml-40 sm:ml-28 md:m-0  flex justify-center items-center">
+          <div className="w-1/2 sm:w-3/4 md:w-1/2 lg:w-1/4 mt-10 ml-36 sm:ml-24 md:m-0  flex justify-center items-center">
             <img
               src={boyWithBook}
               alt="boy-with-book"

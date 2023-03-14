@@ -67,16 +67,6 @@ function Nav({
               />
             </button>
           </div>
-          <div className="md:ml-4">
-            <div>
-              <Link
-                to="/dashboard"
-                className="w-28 text-center py-2 px-4 rounded-3xl border border-green-600 text-white bg-green-600 dark:bg-transparent dark:border dark:border-[#51D1B4]  dark:hover:bg-[#51D1B4] dark:hover:text-slate-700 hover:text-green-600 hover:bg-white transition-colors"
-              >
-                Dashboard
-              </Link>
-            </div>
-          </div>
         </div>
         <div className="w-full md:w-0">
           <MobileNavMenu

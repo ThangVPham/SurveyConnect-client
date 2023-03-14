@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import useFetch from "../utility/useFetch";
 import ErrorImg from "../assets/error.jpg";
 import Spinner from "../assets/loading-gif.gif";
-import { useNavigate } from "react-router-dom";
+
 import SurveyItem from "./SurveyItem";
 import "./DashSurveyList.css";
 
@@ -14,10 +14,10 @@ const baseURL = "https://surveyconnect-server.onrender.com";
 function DashSurveyList({ theme }) {
   const searchIcon = <FontAwesomeIcon icon={faSearch} />;
   const token = localStorage.getItem("token");
-  const navigate = useNavigate();
+
   //Fetch data from db
   const { data = [], loading, error } = useFetch(`${baseURL}/survey`, token);
-  console.log(data);
+
   const [surveyList, setSurveyList] = useState([]);
   const [tabActive, setTabActive] = useState("All");
   const [filteredSurveys, setFilteredSurveys] = useState([]);

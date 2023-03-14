@@ -51,7 +51,15 @@ function MobileNavMenu({
                 />
               </button>
             </div>
-
+            <button
+              value={"Welcome"}
+              onClick={(e) => {
+                navigateTab(e);
+              }}
+              className=" p-2 hover:text-cyan-600"
+            >
+              Home
+            </button>
             <button
               value={"Pricing"}
               onClick={(e) => {
@@ -61,34 +69,6 @@ function MobileNavMenu({
             >
               Pricing
             </button>
-            <button
-              value={"About"}
-              onClick={(e) => {
-                navigateTab(e);
-              }}
-              className="p-2 hover:text-cyan-600"
-            >
-              About
-            </button>
-          </div>
-          {/* Dashboard/Login/Signup */}
-          <div>
-            {token ? (
-              <div>
-                <Link to="/dashboard" className="ml-2 hover:text-cyan-600">
-                  Dashboard
-                </Link>
-              </div>
-            ) : (
-              <div className="flex flex-col">
-                <Link to="/login" className="pb-4 hover:text-cyan-600">
-                  Login
-                </Link>
-                <Link to="/register" className=" hover:text-cyan-500">
-                  Sign Up
-                </Link>
-              </div>
-            )}
           </div>
         </div>
         <div className=" h-screen">
