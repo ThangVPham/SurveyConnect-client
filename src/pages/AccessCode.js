@@ -3,7 +3,7 @@ import { useLocation, useNavigate, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import "./GradientBG.css";
-function AccessCode({ theme }) {
+function AccessCode() {
   const location = useLocation();
   const navigate = useNavigate();
   const surveyId = location.state.id;
@@ -54,12 +54,10 @@ function AccessCode({ theme }) {
   return (
     <div
       className={
-        theme
-          ? "dark-background h-screen flex jsutify-center"
-          : "background h-screen flex justify-center"
+        " dark:bg-gradient-to-tr dark:from-[#172A46] dark:via-[#0F2746] dark:to-[#11386E] bg-gradient-to-r from-[#1D6777] via-[#218E61] to-[#13885D] h-screen flex justify-center"
       }
     >
-      <div className="w-5/6 md:w-2/3 lg:w-1/2 xl:w-1/3 bg-slate-800/[0.5] dark:bg-transparent dark:border dark:border-slate-800 dark:shadow-2xl text-white mx-auto my-auto h-1/2 rounded-xl p-5 bg-sky-50">
+      <div className="w-5/6 md:w-2/3 lg:w-1/2 xl:w-1/3 bg-slate-800/[0.5] dark:bg-transparent dark:border dark:border-slate-800 dark:shadow-2xl text-white mx-auto my-auto min-h-[400px] rounded-xl p-5 bg-sky-50">
         <div className="text-center mt-16">
           <h3 className="font-bold text-xl">
             Survey Name: {location.state.surveyName}
@@ -75,7 +73,7 @@ function AccessCode({ theme }) {
           {accessCodeError && (
             <div
               id="toast-danger"
-              className="flex items-center w-full p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800"
+              className="flex items-center w-full p-4 mb-4 text-gray-500 bg-gray-900/[0.75] rounded-lg shadow dark:text-gray-400 dark:bg-gray-800"
               role="alert"
             >
               <div className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-red-500 bg-red-100 rounded-lg dark:bg-red-800 dark:text-red-200">
@@ -99,7 +97,7 @@ function AccessCode({ theme }) {
               </div>
               <button
                 type="button"
-                className="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
+                className="ml-auto -mx-1.5 -my-1.5 bg-transparent text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5  inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
                 data-dismiss-target="#toast-danger"
                 aria-label="Close"
                 onClick={() => {
@@ -126,7 +124,7 @@ function AccessCode({ theme }) {
 
           <input
             type="text"
-            className="rounded-xl px-5 h-10 text-center text-black border-transparent"
+            className="rounded-xl px-5 h-10 text-center text-black border-transparent bg-sky-100 focus:outline-none"
             placeholder="Enter Access Code"
             value={accessBody.accessCode}
             name="accessCode"

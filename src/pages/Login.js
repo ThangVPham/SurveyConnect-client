@@ -5,7 +5,7 @@ import { useNavigate, Link } from "react-router-dom";
 import "./GradientBG.css";
 import Spinner from "../assets/loading-gif.gif";
 
-function Login({ theme }) {
+function Login() {
   const HomeIcon = <FontAwesomeIcon icon={faHome} />;
   const EyeReveal = <FontAwesomeIcon icon={faEye} />;
   const baseURL = "https://surveyconnect-server.onrender.com";
@@ -56,9 +56,7 @@ function Login({ theme }) {
   return (
     <div
       className={
-        theme
-          ? "w-full h-screen flex items-center justify-center dark-background pb-1"
-          : "w-full h-screen flex items-center justify-center background pb-1"
+        "dark:bg-gradient-to-tr dark:from-[#172A46] dark:via-[#0F2746] dark:to-[#11386E] bg-gradient-to-r from-[#1D6777] via-[#218E61] to-[#13885D] w-full h-screen flex items-center justify-center background pb-1"
       }
     >
       <div className="w-96 xl:w-1/4 flex flex-col h-5/7 border-transparet rounded-2xl p-10 dark:bg-[#172A46] shadow-2xl bg-slate-800/50">

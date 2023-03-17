@@ -11,7 +11,7 @@ import "./DashSurveyList.css";
 
 const baseURL = "https://surveyconnect-server.onrender.com";
 
-function DashSurveyList({ theme }) {
+function DashSurveyList() {
   const searchIcon = <FontAwesomeIcon icon={faSearch} />;
   const token = localStorage.getItem("token");
 

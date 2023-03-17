@@ -10,7 +10,7 @@ const home = <FontAwesomeIcon icon={faHome} />;
 
 const token = localStorage.getItem("token");
 
-function Survey({ theme }) {
+function Survey() {
   const navigate = useNavigate();
   const baseURL = "https://surveyconnect-server.onrender.com";
   const location = useLocation();

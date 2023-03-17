@@ -4,6 +4,7 @@ import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import SurveyResponseSuccess from "./SurveyResponseSuccess";
 import SurveyResponseError from "./SurveyResponseError";
+import Footer from "./Footer";
 const home = <FontAwesomeIcon icon={faHome} />;
 const token = localStorage.getItem("token");
 const baseURL = "https://surveyconnect-server.onrender.com";
@@ -14,7 +15,7 @@ function QuestionCard({ survey }) {
   const [questionNum, setQuestionNum] = useState(0);
   const [submitSuccess, setSubmitSucces] = useState(false);
   const [submitError, setSubmitError] = useState(false);
-  console.log(submitSuccess);
+
   const questions = survey.questions.map((q) => {
     return q.question;
   });
@@ -92,7 +93,10 @@ function QuestionCard({ survey }) {
     return;
   };
   const verifyEmail = async () => {
-    const email = { email: response[currentQuestion]["Question 1"].email };
+    console.log(response[currentQuestion]);
+    const email = {
+      email: response[currentQuestion]["Question 1"].email,
+    };
 
     if (emailFormatRegex.test(email.email)) {
       const res = await fetch(
@@ -344,6 +348,7 @@ function QuestionCard({ survey }) {
           <SurveyResponseError></SurveyResponseError>
         </div>
       )}
+      <Footer></Footer>
     </div>
   );
 }

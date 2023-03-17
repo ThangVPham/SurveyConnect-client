@@ -3,11 +3,9 @@ import boyWithBook from "../assets/boy-with-book.svg";
 import { useNavigate } from "react-router-dom";
 import "./Welcome.css";
 
-function Welcome({ theme }) {
+function Welcome() {
   const navigate = useNavigate();
-  const checkLogin = () => {
-    navigate("/dashboard");
-  };
+
   return (
     <div>
       <div>
@@ -25,8 +23,10 @@ function Welcome({ theme }) {
             </p>
             <div className="flex">
               <button
-                className="bg-green-600 w-1/7 px-4 py-2 border rounded-3xl text-sky-50 mt-5 mx-2 hover:cursor-pointer  hover:shadow-xl  dark:bg-transparent dark:hover:text-slate-700 dark:border-[#51D1B4]  hover:text-green-600 hover:bg-white dark:hover:bg-[#51D1B4] transition-colors"
-                onClick={checkLogin}
+                className="bg-green-600 w-1/7 px-4 py-2 border  hover:border-green-600 rounded-3xl text-sky-50 mt-5 mx-2 hover:cursor-pointer  hover:shadow-xl  dark:bg-transparent dark:hover:text-slate-700 dark:border-[#51D1B4]  hover:text-green-600 hover:bg-white dark:hover:bg-[#51D1B4] transition-colors duration-300"
+                onClick={() => {
+                  navigate("/dashboard");
+                }}
               >
                 Take Survey
               </button>

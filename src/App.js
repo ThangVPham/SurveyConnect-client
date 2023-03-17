@@ -49,7 +49,6 @@ function App() {
             path="/"
             element={
               <Home
-                theme={darkTheme}
                 tab={tab}
                 toggleTheme={toggleTheme}
                 navigateTab={navigateTab}
@@ -61,17 +60,17 @@ function App() {
               />
             }
           />
-          <Route path="/register" element={<Register theme={darkTheme} />} />
-          <Route path="/login" element={<Login theme={darkTheme} />} />
-          <Route path="/dashboard" element={<Dashboard theme={theme} />} />
-          <Route path="/survey/asl" element={<ASLSurvey theme={theme} />} />
-          <Route path="/survey/:id" element={<Survey theme={theme} />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard theme={darkTheme} />} />
+          <Route path="/survey/asl" element={<ASLSurvey />} />
+          <Route path="/survey/:id" element={<Survey />} />
 
           <Route
             path="/surveyedit/:id"
             element={<SurveyEdit theme={theme} />}
           />
-          <Route path="/verify" element={<AccessCode theme={theme} />} />
+          <Route path="/verify" element={<AccessCode />} />
           <Route path="/user/" element={<UserProfile theme={theme} />} />
 
           <Route path="/newsurvey" element={<NewSurvey theme={theme} />} />

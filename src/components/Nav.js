@@ -8,17 +8,14 @@ import Switch from "./Switch";
 function Nav({
   theme,
   toggleTheme,
-  tab,
   navigateTab,
   active,
   handleChangeActive,
   toggle,
   setToggle,
 }) {
-  const token = localStorage.getItem("token");
-
   return (
-    <div className={theme ? "dark" : ""}>
+    <div>
       <div className="h-26 flex justify-between items-center px-10 py-2  shadow-2xl dark:bg-[#142641]">
         <Link to="/" className="md:w-60 w-1/2 z-100">
           <img

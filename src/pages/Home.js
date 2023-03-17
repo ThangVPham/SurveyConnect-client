@@ -4,7 +4,6 @@ import Welcome from "../components/Welcome";
 import Pricing from "../components/Pricing";
 import About from "../components/About";
 function Home({
-  theme,
   tab,
   darkTheme,
   toggleTheme,
@@ -15,20 +14,19 @@ function Home({
   setToggle,
 }) {
   return (
-    <div className={theme ? "h-screen bg-[#0F172A] " : "h-screen"}>
+    <div className="h-screen dark:bg-[#0F172A] ">
       <Nav
         theme={darkTheme}
         toggleTheme={toggleTheme}
-        tab={tab}
         navigateTab={navigateTab}
         active={active}
         handleChangeActive={handleChangeActive}
         toggle={toggle}
         setToggle={setToggle}
       />
-      {tab === "Welcome" && <Welcome theme={theme} />}
-      {tab === "Pricing" && <Pricing theme={theme} />}
-      {tab === "About" && <About theme={theme} />}
+      {tab === "Welcome" && <Welcome />}
+      {tab === "Pricing" && <Pricing theme={darkTheme} />}
+      {tab === "About" && <About theme={darkTheme} />}
     </div>
   );
 }
