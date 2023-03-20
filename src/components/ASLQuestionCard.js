@@ -66,6 +66,19 @@ function QuestionCard({ survey }) {
     setResponse(obj);
   };
   const submitResponse = async () => {
+    const time = (Date.now() - start) / 1000;
+    const obj = {
+      ...response,
+      [currentQuestion]: {
+        ...response[currentQuestion],
+
+        [`Question ${questionNum + 1}`]: {
+          ...response[currentQuestion][`Question ${questionNum + 1}`],
+          time: `${time.toFixed(3)} seconds`,
+        },
+      },
+    };
+
     const requestHeaders = {
       "Content-Type": "application/json",
       authorization: `Bearer ${token}`,
@@ -74,7 +87,7 @@ function QuestionCard({ survey }) {
     const res = await fetch(`${baseURL}/response/submitresponse`, {
       method: "POST",
       headers: requestHeaders,
-      body: JSON.stringify(response),
+      body: JSON.stringify(obj),
     });
     const data = await res.json();
     if (data.status === "Success") {
@@ -289,13 +302,6 @@ function QuestionCard({ survey }) {
 
             {/*Next/Prev buttons */}
             <div className="flex justify-around w-1/2 mx-auto">
-              {/* <button
-            onClick={() => nextQuestion("prev")}
-            className="bg-slate-900/50 w-1/7 text-sm px-4 py-2 border rounded-3xl text-white mt-5 "
-            disabled
-          >
-            Previous
-          </button> */}
               {questionNum === 0 && (
                 <button
                   className="bg-cyan-900 w-24 text-sm px-4 py-2 border dark:border-2 dark:border-[#51D1B4] dark:text-[#51D1B4] rounded-3xl text-slate-200 mt-5 active:bg-cyan-900/75 dark:hover:bg-[#0A192F] dark:hover:text-cyan-100 dark:bg-transparent"
